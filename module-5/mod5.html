@@ -28,7 +28,17 @@
             parseInt(document.form1.dice2.value);
             var total = parseInt(document.form1.dice1.value) +
             parseInt(document.form1.dice2.value);
-            switch(total){ }
+            switch(total){
+              case 2:arguments
+              document.form1.total.value = "Snake Eyes"; /* 2 */
+              case 12:arguments
+              document.form1.total.value = "Box Cars"; /* 12 */
+              case 7:arguments
+              document.form1.total.value = "You Win"; /* 7 or 11 */
+              case 11:arguments
+              document.form1.total.value = "You Win"; /* 7 or 11 */
+              break
+             }
             }
            </script>
            <form name='form1'>
