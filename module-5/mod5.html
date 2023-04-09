@@ -29,14 +29,17 @@
             var total = parseInt(document.form1.dice1.value) +
             parseInt(document.form1.dice2.value);
             switch(total){
+              
               case 2:arguments
-              document.form1.total.value = "Snake Eyes"; /* 2 */
+              document.form1.total.value = "Snake Eyes:" + total; /* 2 */
               case 12:arguments
-              document.form1.total.value = "Box Cars"; /* 12 */
+              document.form1.total.value = "Box Cars:" + total; /* 12 */
               case 7:arguments
-              document.form1.total.value = "You Win"; /* 7 or 11 */
+              document.form1.total.value = "You Win:" + total; /* 7 or 11 */
               case 11:arguments
-              document.form1.total.value = "You Win"; /* 7 or 11 */
+              document.form1.total.value = "You Win" + total; /* 7 or 11 */
+              default:arguments
+              total;
               break
              }
             }
