@@ -8,7 +8,7 @@
   9 April 2023
 
     -->
-    
+
 <head>
   <style>
     p {
@@ -27,16 +27,16 @@
       parseInt(document.form1.dice2.value);
       switch(total){ 
         case 2:
-          document.form1.total.value = "Snake Eyes";
+          document.form1.total.value = total + " Snake Eyes!";
           break;
         case 12:
-          document.form1.total.value = "Box Cars";
+          document.form1.total.value = total + " Box Cars!";
           break;
         case 7:
-          document.form1.total.value = "You Win";
+          document.form1.total.value = total + " You Win!";
           break;
         case 11:
-          document.form1.total.value = "You Win";
+          document.form1.total.value = total + " You Win!";
           break;
       }
     }
