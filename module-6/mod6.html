@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>FIBONACCI SERIES</title>
+</head>
+<body>
+   <script type = "text/javascript">
+
+      var num1=0;
+      var num2=1;
+    document.write('FIBONACCI SERIES:');
+    document.write("",num1," ");
+    document.write("",num2," ");
+      var nextTerm;
+      var counter;
+        for(counter=2; counter<30; counter++)
+    {
+        nextTerm=num1+num2;
+        document.write("",nextTerm," ");
+        
+        num1=num2;
+        num2=nextTerm;
+    
+    }
+    </script>
+</body>
+</html>
