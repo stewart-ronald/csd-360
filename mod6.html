@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <!--
+
+  Ronald Stewart
+  Module 6 Programming Assignment
+  16 April 2023
+
+    -->
+
+    <head>
+      <style>
+        p {
+          font-weight: bold;
+        }
+      </style>
+    </head>
+    <body>
+      <h2>First 30 Fibonacci Numbers</h2>
+    <script>
+
+      // declare first 2 variables
+      var first = 1;
+      var second = 1;
+
+      // declare required variables
+      var counter;
+      var totalizer;
+
+      // write first 2 varaibles
+      document.write("1 - 1");
+
+      document.write("<br>");
+          document.write("2 - 1"); document.write("<br>");
+            
+          // loop over from 3 to 30
+            for (counter = 3; counter <= 30; counter++) {
+
+              // add previous 2 variables
+              totalizer = first + second;
+
+              // update first to second variable
+              first = second;
+
+              // update second to totalizer
+              second = totalizer;
+
+              // write current fibonacci number
+              document.write(counter + " - " + totalizer);
+              document.write("<br>");
+              }
+    </script>
+  </body>
+</html>
