@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <meta charset="utf-8">
-   <title>FIBONACCI SERIES</title>
+<title>Fibonacci Numbers</title>
 </head>
 <body>
-   <script type = "text/javascript">
 
-      var num1=0;
-      var num2=1;
-    document.write('FIBONACCI SERIES:');
-    document.write("",num1," ");
-    document.write("",num2," ");
-      var nextTerm;
-      var counter;
-        for(counter=2; counter<30; counter++)
-    {
-        nextTerm=num1+num2;
-        document.write("",nextTerm," ");
-        
-        num1=num2;
-        num2=nextTerm;
-    
-    }
-    </script>
+<script>
+// declaring first 2 variables
+var first = 1;
+var second = 1;
+// declaring required variables
+var counter;
+var totalizer;
+// writing first 2 varaibles
+document.write("1 - 1");
+// printing new line
+document.write("<br>");
+document.write("2 - 1");
+document.write("<br>");
+// looping over from 3 to 30
+for(counter = 3; counter <= 30; counter++) {
+	// adding previous 2 variables
+	totalizer = first + second;
+	// updating first to second variable
+	first = second;
+	// updating second to totalizer
+	second = totalizer;
+	// writing current fibonacci number
+	document.write(counter + " - " + totalizer);
+	document.write("<br>");
+}
+</script>
+
 </body>
 </html>
