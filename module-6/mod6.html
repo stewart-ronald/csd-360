@@ -6,11 +6,11 @@
   <body>
     <script>
 
-      // declaring first 2 variables
+      // declare first 2 variables
       var first = 1;
       var second = 1;
 
-      // declaring required variables
+      // declare required variables
       var counter;
       var totalizer;
 
@@ -20,19 +20,19 @@
       document.write(" < br > ");
           document.write("2 - 1"); document.write(" < br > ");
             
-          // looping over from 3 to 30
+          // loop over from 3 to 30
             for (counter = 3; counter <= 30; counter++) {
 
-              // adding previous 2 variables
+              // add previous 2 variables
               totalizer = first + second;
 
-              // updating first to second variable
+              // update first to second variable
               first = second;
 
-              // updating second to totalizer
+              // update second to totalizer
               second = totalizer;
 
-              // writing current fibonacci number
+              // write current fibonacci number
               document.write(counter + " - " + totalizer);
               document.write(" < br > ");
               }
