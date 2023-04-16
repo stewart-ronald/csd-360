@@ -5,25 +5,33 @@
   </head>
   <body>
     <script>
+
       // declaring first 2 variables
       var first = 1;
       var second = 1;
+
       // declaring required variables
       var counter;
       var totalizer;
-      // writing first 2 varaibles
+
+      // write first 2 varaibles
       document.write("1 - 1");
-      // printing new line
+
       document.write(" < br > ");
           document.write("2 - 1"); document.write(" < br > ");
             // looping over from 3 to 30
+
             for (counter = 3; counter <= 30; counter++) {
+
               // adding previous 2 variables
               totalizer = first + second;
+
               // updating first to second variable
               first = second;
+
               // updating second to totalizer
               second = totalizer;
+              
               // writing current fibonacci number
               document.write(counter + " - " + totalizer);
               document.write(" < br > ");
