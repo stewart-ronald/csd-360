@@ -27,10 +27,13 @@
       <script>
       var sports_Teams = ["New York Yankees (Baseball)", "Los Angeles Lakers (Basketball)", "Manchester United (Football/Soccer)", "New England Patriots (American Football)",
     "Real Madrid (Football/Soccer)", "Boston Red Sox (Baseball)", "Dallas Cowboys (American Football)", "FC Barcelona (Football/Soccer)", "Golden State Warriors (Basketball)", "Pittsburgh Penguins (Ice Hockey)"];
-    
-    const reversed = [...sports_Teams].reverse()
-    console.log(reversed)
-    console.log(sports_Teams)
+
+document.write("<ul>");
+for(var i = 0; i < sports_Teams.length; ++i){
+ document.write("<li>" + sports_Teams[i] + "</li>");
+}
+
+document.write("</ul>");
     </script>      
     </body>
     </html>
