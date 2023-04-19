@@ -17,21 +17,27 @@
       </style>
     </head>
     <body>
+
+      <h1>JavaScript Arrays For Loop</h1>
+      
+      <p>Looping over the array using for loop</p>
+      
+      <p id="demo"></p>
+      
       <script>
-      // declare array
-      var sports = [ "CSK" , "DC" , "RCB" , "MI" , "SRH" , "XIPB" , "KKR" ,"RR" , "IX" , "X" ];
-      // run a loop to print in orignal order
-      console.log("Printing in orignal order")
-      for(var i=0 ; i<sports.length ; i++){
-        // print each team
-        console.log(sports[i]);
+      var sports_Teams, text, Len, i;
+      sports_Teams = ["India" ,"Bangadesh" , "pakistan","Australia" ,"England","Newzeland","Hong-Kong" ,"Zimbawe","China" ,"West-Indies"];
+      
+      Len = sports_Teams.length;
+      
+      text = "<ul>";
+      for (i = 0; i < Len; i++) {
+      text += "<li>" + sports_Teams[i] + "</li>";
       }
-      // run a loop to print in reverse order
-      console.log("Printing in reverse order")
-      for(var i=sports.length-1 ; i>=0 ; i--){
-        // print each team
-        console.log(sports[i]);
-      }
+      text += "</ul>";
+      
+      document.getElementById("demo").innerHTML = text;
       </script>
-    </body>
-</html>
+      
+      </body>
+      </html>
