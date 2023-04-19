@@ -25,35 +25,12 @@
       <p id="demo"></p>
       
       <script>
-      var sports_Teams, text, Len, i;
-      sports_Teams = ["New York Yankees (Baseball)", "Los Angeles Lakers (Basketball)", "Manchester United (Football/Soccer)", "New England Patriots (American Football)",
+      var sports_Teams = ["New York Yankees (Baseball)", "Los Angeles Lakers (Basketball)", "Manchester United (Football/Soccer)", "New England Patriots (American Football)",
     "Real Madrid (Football/Soccer)", "Boston Red Sox (Baseball)", "Dallas Cowboys (American Football)", "FC Barcelona (Football/Soccer)", "Golden State Warriors (Basketball)", "Pittsburgh Penguins (Ice Hockey)"];
-      
-      Len = sports_Teams.length;
-      
-      text = "<ul>";
-      for (i = 0; i < Len; i++) {
-      text += "<li>" + sports_Teams[i] + "</li>";
-      }
-      text += "</ul>";
-      
-      document.getElementById("demo").innerHTML = text;
-      </script>
-      
-      <script>
-      sports_Teams = ["New York Yankees (Baseball)", "Los Angeles Lakers (Basketball)", "Manchester United (Football/Soccer)", "New England Patriots (American Football)",
-    "Real Madrid (Football/Soccer)", "Boston Red Sox (Baseball)", "Dallas Cowboys (American Football)", "FC Barcelona (Football/Soccer)", "Golden State Warriors (Basketball)", "Pittsburgh Penguins (Ice Hockey)"];
-        Len = sports_Teams.length;
-        sports_Teams.reverse();
-        
-        text = "<ul>";
-        for (i = 0; i < Len; i++) {
-        text += "<li>" + sports_Teams[i] + "</li>";
-        }
-        text += "</ul>";
-        
-        document.getElementById("demo").innerHTML = text;
-        </script>
-      
-      </body>
-      </html>
+    
+    const reversed = [...sports_Teams].reverse()
+    console.log(reversed)
+    console.log(sports_Teams)
+    </script>      
+    </body>
+    </html>
