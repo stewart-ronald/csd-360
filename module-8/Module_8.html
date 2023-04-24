@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Display Table Containing the Values Using Loop Iterations</title>
+  <style>
+    /* Define table styling */
+    table {
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    /* Alternate row styling */
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    /* Add decorative elements */
+    h1 {
+      font-size: 24px;
+      text-align: center;
+      margin-top: 30px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .table-wrapper {
+      position: relative;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Table of Values</h1>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Initial Value</th>
+            <th>Square Root</th>
+            <th>Power 2</th>
+            <th>Power 3</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script>
+    // Get the table body element
+    const tableBody = document.getElementById('table-body');
+
+    // Loop through the values 4 to 14 and add rows to the table
+    for (let i = 4; i <= 14; i++) {
+      // Create a new row element
+      const row = document.createElement('tr');
+      
+      // Add cells to the row with the appropriate values
+      const cell1 = document.createElement('td');
+      cell1.textContent = i;
+      row.appendChild(cell1);
+      
+      const cell2 = document.createElement('td');
+      cell2.textContent = Math.sqrt(i).toFixed(2);
+      row.appendChild(cell2);
+      
+      const cell3 = document.createElement('td');
+      cell3.textContent = Math.pow(i, 2);
+      row.appendChild(cell3);
+      
+      const cell4 = document.createElement('td');
+      cell4.textContent = Math.pow(i, 3);
+      row.appendChild(cell4);
+      
+      // Add the row to the table body
+      tableBody.appendChild(row);
+    }
+  </script>
+</body>
+</html>
