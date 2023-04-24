@@ -1,39 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
+  <head>
+    <style>
+      p {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>10 Favorite Sport Teams</h1>
+    <script>
+      var
+      sports_Teams
+      =
+      ["New York Yankees(Baseball)",
+      "Los Angeles Lakers (Basketball)" ,
+      "Manchester United (Football / Soccer)",
+      "New England Patriots (American Football)",
+      "Real Madrid (Football / Soccer)",
+      "Boston Red Sox (Baseball)",
+      "Dallas Cowboys (American Football)",
+      "FC Barcelona (Football / Soccer)",
+      "Golden State Warriors (Basketball)",
+      "Pittsburgh Penguins (Ice Hockey)"];
 
-    <!--
-
-  Ronald Stewart
-  Module 7 Programming Assignment
-  23 April 2023
-
-    -->
-
-    <head>
-      <style>
-        p {
-          font-weight: bold;
-        }
-      </style>
-    </head>
-    <body>
-
-      <h1>JavaScript Arrays For Loop</h1>
-      
-      <p>Looping over the array using for loop</p>
-      
-      <p id="demo"></p>
-      
-      <script>
-      var sports_Teams = ["New York Yankees (Baseball)", "Los Angeles Lakers (Basketball)", "Manchester United (Football/Soccer)", "New England Patriots (American Football)",
-    "Real Madrid (Football/Soccer)", "Boston Red Sox (Baseball)", "Dallas Cowboys (American Football)", "FC Barcelona (Football/Soccer)", "Golden State Warriors (Basketball)", "Pittsburgh Penguins (Ice Hockey)"];
-
-document.write("<ul>");
-for(var i = 0; i < sports_Teams.length; ++i){
- document.write("<li>" + sports_Teams[i] + "</li>");
-}
-
-document.write("</ul>");
-    </script>      
-    </body>
-    </html>
+      document.write("Original array order: ")
+      for(var i = 0; i <sports_Teams.length; i++) { 
+        document.write(sports_Teams[i] + " " ); } 
+        sports_Teams.reverse(); 
+        
+        document.write(" <br>"); 
+        document.write(" <br>"); 
+        
+        document.write("Reverse order : ") 
+        for (var i = 0; i < sports_Teams.length; i++) { 
+          document.write(sports_Teams[i] + " " ); } 
+          </script>
+        <br>
+        <br>
+        <div>
+          <a href="..\index.html">Back to Landing Page</a>
+        </div>
+  </body>
+</html>
