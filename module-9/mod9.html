@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--
+
+  Ronald Stewart
+  Module 9 Programming Assignment
+  30 April 2023
+
+    -->
+    
+<head>
+    <style>
+      p {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Module 9 Programming Assignment</h1>
+    </table>
+    <script>
+      function counter(numbersArray) {
+        
+        var positive = 0, negative = 0, zero = 0;
+        
+          for (var i = 0; i < numbersArray.length; i++) { 
+            if (numbersArray[i] > 0) { 
+            positive++; 
+          } 
+          
+          else if (numbersArray[i] < 0) { 
+            negative++
+          } 
+
+          else {
+            zero++;
+          }
+        }
+
+        var amount = [negative, zero, positive]; 
+        return amount;
+      }
+      
+      var numbersArray = [1, 2, 3, 5, -1, -5, -7, 0, 9, 1, 0, 0, 0, -1, -6, -8, 9]
+      document.write("The array values are: ");
+      document.write(numbersArray);
+      document.write("<br>");
+      document.write("<br>");             
+      document.write("There are " + (counter(numbersArray)[0]) + " negative numbers in this array"); 
+      document.write("<br>");
+      document.write("<br>");
+      document.write("There are " + (counter(numbersArray)[1]) + " zeros in this array"); 
+      document.write("<br>");
+      document.write("<br>");
+      document.write("There are " + (counter(numbersArray)[2]) + " positive numbers in this array");
+    </script>
+    <br>
+    <br>
+    <div>
+      <a href="..\index.html">Back to Landing Page</a>
+    </div>
+  </body>
+</html>
