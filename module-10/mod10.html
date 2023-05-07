@@ -1,68 +1,72 @@
-<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'
-  'http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd'>
-
-<html xmlns='http://www.w3.org/1999/xhtml'>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>
-      Example 10
-    </title>
-    <script>
-      function displayImage(imageFile){
-        var largerImage = document.getElementById("mainImage");
-        var newNode = document.createElement("img");
-        newNode.id = "mainImage";
-        newNode.src = imageFile;
-        newNode.alt = "Large Image";
-        newNode.className = "mainImage";
-        newNode.style.width = "300px";
-        newNode.style.height = "200px";
-        largerImage.parentNode.replaceChild(newNode, largerImage);
-        
-      }
-    </script>
-
-    <link rel='stylesheet' type='text/css' href='body1.css' />
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A demo webpage</title>
   </head>
-
   <body>
-    <br />
-    <div>
-      <a href=#
-         onmouseover="cave.src='masonpack.jpeg';"
-         onmouseout= "cave.src='masonpackrevert.jpeg';"
-      >
-        <img border = 0 name = "masonpack" src = "masonpackrevert.jpeg">
-      </a>
-    </div>
-    <br />
-    <div
-         onmouseover="this.style.color='red';"
-         onmouseout= "this.style.color='black';">
+    <!-- HTML -->
+    <!-- heading text with colors -->
+    <h1 id="demoh1ref" style="background-color: #174e4e; color: aliceblue">This page is for JavaScript events demo</h1>
 
-      Run your mouse over the image to change.
-      <br />
+    <!-- paragraph -->
+    <p id="demopref">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet at augue et congue. 
+      Curabitur volutpat ante molestie justo sodales, eget elementum orci lacinia. 
+      Aenean vel sem maximus, lacinia nibh malesuada, elementum nisl. Maecenas sed nisi aliquam, 
+      sagittis quam in, tristique sapien. In sed aliquam enim. Aenean ut fermentum mi, eu luctus dolor. 
+      Morbi varius hendrerit metus sit amet molestie. Aenean dignissim tortor in elit suscipit, id accumsan nibh pulvinar. 
+    </p>
 
-    </div>
-    <div>
-      <a href=#
-         onmouseover="moon.src='masonpack1.jpeg';"
-         onmouseout= "moon.src='masonpack1revert.jpeg';"
-      >
-        <img border = 0 name = "masonpack1" src = "masonpack1revert.jpeg">
-      </a>
-    </div>
-    <br />
-    <div
-         onmouseover="this.style.color='red';"
-         onmouseout= "this.style.color='black';">
+    <br /><br />
 
-      Run your mouse over the image to change.
-      <br />
-      Right-click and select View Source for more details.
+    <!-- an image -->
+    <h3>A demo image</h3>
+    <img src="masonpack1.jpeg" id="imgofintr" alt="an image of interest" height="128" width="128" />
+    <!-- JavaScript -->
+    <script>
+      // Change image when mouse is hovered over it
+      document.getElementById("imgofintr").addEventListener("mouseover", function switchimg() {
+        // change image
+        document.querySelector("img").src = "masonpack.jpeg";
+      });
 
-    </div>
+      // Change image back to original when mouse is left over it
+      document.getElementById("imgofintr").addEventListener("mouseleave", function switchimg() {
+        // change image
+        document.querySelector("img").src = "masonpack1.jpeg";
+      });
 
+      // Change font style and/or color and  background color when mouse is over h1 tag
+      document.getElementById("demoh1ref").addEventListener("mouseenter", function () {
+        document.querySelector("h1").style.backgroundColor = "yellow";
+        // change text color
+        document.querySelector("h1").style.color = "black";
+        document.querySelector("h1").style.fontStyle = "italic";
+      });
+
+      // Change font style and/or color and  background color back to original when mouse is left h1 tag
+      document.getElementById("demoh1ref").addEventListener("mouseleave", function () {
+        document.querySelector("h1").style.backgroundColor = "#174e4e";
+        // change text color
+        document.querySelector("h1").style.color = "aliceblue";
+        document.querySelector("h1").style.fontStyle = "normal";
+      });
+
+      // change paragraph text's styles on mouse hover
+      document.getElementById("demopref").addEventListener("mouseenter", function () {
+        document.querySelector("p").style.fontSize = "x-large";
+        document.querySelector("p").style.fontStyle = "oblique";
+        document.querySelector("p").style.color = "orange";
+      });
+      // change paragraph text's to original styles on mouse leave
+      document.getElementById("demopref").addEventListener("mouseleave", function () {
+        document.querySelector("p").style.fontSize = "normal";
+        document.querySelector("p").style.fontStyle = "normal";
+        document.querySelector("p").style.color = "black";
+      });
+    </script>
   </body>
-
 </html>
