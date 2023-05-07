@@ -13,30 +13,29 @@
 
     <!-- paragraph -->
     <p id="demopref">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet at augue et congue. 
-      Curabitur volutpat ante molestie justo sodales, eget elementum orci lacinia. 
-      Aenean vel sem maximus, lacinia nibh malesuada, elementum nisl. Maecenas sed nisi aliquam, 
-      sagittis quam in, tristique sapien. In sed aliquam enim. Aenean ut fermentum mi, eu luctus dolor. 
-      Morbi varius hendrerit metus sit amet molestie. Aenean dignissim tortor in elit suscipit, id accumsan nibh pulvinar. 
+      Random text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dignissimos voluptatum, cupiditate voluptas nihil quibusdam
+      consequuntur facere fugit, deleniti, suscipit tempora <br />
+      perferendis cumque exercitationem commodi ducimus. Consectetur assumenda ipsa ea dolore, veniam modi, rerum consequuntur fugit veritatis
+      mollitia, eius molestiae.
     </p>
 
     <br /><br />
 
     <!-- an image -->
     <h3>A demo image</h3>
-    <img src="masonpack1.jpeg" id="imgofintr" alt="an image of interest" height="128" width="128" />
+    <img src="masonpack.jpeg" id="imgofintr" alt="an image of interest" height="128" width="128" />
     <!-- JavaScript -->
     <script>
       // Change image when mouse is hovered over it
       document.getElementById("imgofintr").addEventListener("mouseover", function switchimg() {
         // change image
-        document.querySelector("img").src = "masonpack.jpeg";
+        document.querySelector("img").src = "masonpackrevert.jpeg";
       });
 
       // Change image back to original when mouse is left over it
       document.getElementById("imgofintr").addEventListener("mouseleave", function switchimg() {
         // change image
-        document.querySelector("img").src = "masonpack1.jpeg";
+        document.querySelector("img").src = "masonpack.jpg";
       });
 
       // Change font style and/or color and  background color when mouse is over h1 tag
