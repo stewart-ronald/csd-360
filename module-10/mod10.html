@@ -24,6 +24,7 @@
     <!-- an image -->
     <h3>The Mason Pack</h3>
     <img src="masonpack.jpeg" id="imgofintr" alt="an image of interest" height="128" width="128" />
+    <img src="masonpack1.jpeg" id="imgofintr" alt="an image of interest" height="128" width="128" />
     <!-- JavaScript -->
     <script>
       // Change image when mouse is hovered over it
@@ -37,7 +38,19 @@
         // change image
         document.querySelector("img").src = "masonpack.jpeg";
       });
+      
+      // Change image when mouse is hovered over it
+      document.getElementById("imgofintr").addEventListener("mouseover", function switchimg() {
+        // change image
+        document.querySelector("img").src = "masonpack1revert.jpeg";
+      });
 
+      // Change image back to original when mouse is left over it
+      document.getElementById("imgofintr").addEventListener("mouseleave", function switchimg() {
+        // change image
+        document.querySelector("img").src = "masonpack1.jpeg";
+      });
+      
       // Change font style and/or color and  background color when mouse is over h1 tag
       document.getElementById("demoh1ref").addEventListener("mouseenter", function () {
         document.querySelector("h1").style.backgroundColor = "yellow";
