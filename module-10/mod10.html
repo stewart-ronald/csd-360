@@ -24,23 +24,23 @@
 
     <!-- an image -->
     <h3>The Mason Pack</h3>
-    <img src="masonpack.jpeg" id="imgofintr" alt="an image of interest" height="200" width="200" />
+    <img src="masonpack.jpeg" id="masonpack" alt="an image of interest" height="200" width="200" />
     
     <!-- JavaScript -->
     <script>
-      // Change image when mouse is hovered over it
-      document.getElementById("imgofintr").addEventListener("mouseover", function switchimg() {
+      // Change image on mouse hover
+      document.getElementById("masonpack").addEventListener("mouseover", function switchimg() {
         // change image
         document.querySelector("img").src = "masonpackrevert.jpeg";
       });
 
-      // Change image back to original when mouse is left over it
-      document.getElementById("imgofintr").addEventListener("mouseleave", function switchimg() {
+      // Change image back to original on mouse leave
+      document.getElementById("masonpack").addEventListener("mouseleave", function switchimg() {
         // change image
         document.querySelector("img").src = "masonpack.jpeg";
       });
       
-      // Change font style and/or color and  background color when mouse is over h1 tag
+      // Change font style and color, and  background color
       document.getElementById("demoh1ref").addEventListener("mouseenter", function () {
         document.querySelector("h1").style.backgroundColor = "yellow";
         // change text color
@@ -48,7 +48,7 @@
         document.querySelector("h1").style.fontStyle = "italic";
       });
 
-      // Change font style and/or color and  background color back to original when mouse is left h1 tag
+      // Change font style and color, and background color back to original
       document.getElementById("demoh1ref").addEventListener("mouseleave", function () {
         document.querySelector("h1").style.backgroundColor = "#174e4e";
         // change text color
@@ -56,13 +56,13 @@
         document.querySelector("h1").style.fontStyle = "normal";
       });
 
-      // change paragraph text's styles on mouse hover
+      // change paragraph text styles on mouse hover
       document.getElementById("demopref").addEventListener("mouseenter", function () {
         document.querySelector("p").style.fontSize = "x-large";
         document.querySelector("p").style.fontStyle = "oblique";
         document.querySelector("p").style.color = "orange";
       });
-      // change paragraph text's to original styles on mouse leave
+      // change paragraph text to original styles on mouse leave
       document.getElementById("demopref").addEventListener("mouseleave", function () {
         document.querySelector("p").style.fontSize = "normal";
         document.querySelector("p").style.fontStyle = "normal";
