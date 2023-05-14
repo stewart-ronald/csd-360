@@ -1,8 +1,27 @@
-img {
-    width: 150px;
-    height: 100px;
-}
-
-h1{
+body {
+    background-color: black;
+  }
+  
+  h2 {
     text-align: center;
-}
+    color: white;
+  }
+  .image-gallery {
+    display: flex;
+    justify-content: center;
+  }
+  .image-gallery > div {
+    margin: 10px;
+  }
+  .image-gallery img {
+    width: 100px;
+    height: 100px;
+  }
+  .mainImage {
+    width: 40%;
+    margin: auto;
+  }
+  .mainImage img {
+    width: 100%;
+  }
+  

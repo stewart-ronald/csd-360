@@ -1,75 +1,60 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Image Change</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="mod11.css">
-<style type="text/css">
-.thumb{
-width: 100px;
-height: 100px;
-cursor: pointer;
-}
-</style>
-<script type="text/javascript">
+<html lang="en">
 
-//This function will change the image based on the image id.
-function changeImage(id){
-if(id==1){
-document.getElementById("image").src = "allphases.png";
-}
-else if(id==2){
-document.getElementById("image").src = "new.png";
-}
-else if(id==3){
-document.getElementById("image").src = "waxcres.png";
-}
-else if(id==4){
-document.getElementById("image").src = "firstquart.png";
-}
-else if(id==5){
-document.getElementById("image").src = "waxgib.png";
-}
-else if(id==6){
-document.getElementById("image").src = "full.png";
-}
-else if(id==7){
-document.getElementById("image").src = "wangib.png";
-}
-else if(id==8){
-document.getElementById("image").src = "lastquart.png";
-}
-else if(id==9){
-document.getElementById("image").src = "wancres.png";
-}
-}
-</script>
-</head>
-<body>
-<div class="container" style="margin-top: 10px;">
-<div class="row">
-<div class="col-md-8 col-sm-8">
-<img src="allphases.png" alt="Please check the source destination" height="333" width="500" id="image">
-</div>
-<div class="col-md-4 col-sm-4">
-<div class="row">
-<div class="col-md-4 col-sm-4"><img src="allphases.png" id="1" class="thumb" alt="Please check the source destination" onclick="changeImage(this.id)"></div>
-<div class="col-md-4 col-sm-4"><img src="new.png" id="2" class="thumb" alt="Please check the source destination" onclick="changeImage(this.id)"></div>
-<div class="col-md-4 col-sm-4"><img src="waxcres.png" id="3" class="thumb" alt="Please check the source destination" onclick="changeImage(this.id)"></div>
-</div><br>
-<div class="row">
-<div class="col-md-4 col-sm-4"><img src="firstquart.png" id="4" class="thumb" alt="Please check the source destination" onclick="changeImage(this.id)"></div>
-<div class="col-md-4 col-sm-4"><img src="waxgib.png" id="5" class="thumb" alt="Please check the source destination" onclick="changeImage(this.id)"></div>
-<div class="col-md-4 col-sm-4"><img src="full.png" id="6" class="thumb" alt="Please check the source destination" onclick="changeImage(this.id)"></div>
-</div><br>
-<div class="row">
-<div class="col-md-4 col-sm-4"><img src="wangib.png" id="7" class="thumb" alt="Please check the source destination" onclick="changeImage(this.id)"></div>
-<div class="col-md-4 col-sm-4"><img src="lastquart.png" id="8" class="thumb" alt="Please check the source destination" onclick="changeImage(this.id)"></div>
-<div class="col-md-4 col-sm-4"><img src="wancres.png" id="9" class="thumb" alt="Please check the source destination" onclick="changeImage(this.id)"></div>
-</div>
-</div>
-</div>
-</div>
-</body>
+    <!--
+
+  Ronald Stewart
+  Module 11 Programming Assignment
+  14 May 2023
+
+    -->
+
+<head>
+    <title>Module 11</title>
+    <script>
+      function openImg(imgs) {
+        var expandImg = document.getElementById("mainImage");
+        expandImg.src = imgs.src;
+      }
+    </script>
+    <link rel="stylesheet" href="mod11.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div>
+      <h2>Phases of the Moon</h2>
+    </div>
+    <div class="mainImage">
+      <img id="mainImage" alt="moon_phases" src="allphases.png">
+    </div>
+    <div class="image-gallery">
+      <div>
+        <img src="new.png" alt="new_moon" onclick="openImg(this);">
+      </div>
+      <div>
+        <img src="waxcres.png" alt="waxing_crescent" onclick="openImg(this);">
+      </div>
+      <div>
+        <img src="firstquart.png" alt="first_quarter" onclick="openImg(this);">
+      </div>
+      <div>
+        <img src="waxgib.png" alt="waxing_gibbous" onclick="openImg(this);">
+      </div>
+      <div>
+        <img src="full.png" alt="full_moon" onclick="openImg(this);">
+      </div>
+      <div>
+        <img src="wangib.png" alt="waning_gibbous" onclick="openImg(this);">
+      </div>
+      <div>
+        <img src="thirdquart.png" alt="third_quarter" onclick="openImg(this);">
+      </div>
+      <div>
+        <img src="wancres.png" alt="" onclick="openImg(this);">
+      </div>
+      <div>
+        <img src="allphases.png" alt="moon_phases" onclick="openImg(this);">
+      </div>
+    </div>
+  </body>
 </html>
