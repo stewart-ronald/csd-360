@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--
+
+  Ronald Stewart
+  Module 11 Programming Assignment
+  14 May 2023
+
+    -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Module 11</title>
+  </head>
+  <body>
+    <h1>Module 11 Programming Assignment</h1>
+    <script>
+
+      function displayImage(imageFile){
+        var largerImage = document.getElementById("mainImage");
+        var newNode = document.createElement("img");
+        newNode.id = "mainImage";
+        newNode.src = imageFile;
+        newNode.alt = "Large Image";
+        newNode.className = "mainImage";
+        newNode.style.width = "300px";
+        newNode.style.height = "200px";
+        largerImage.parentNode.replaceChild(newNode, largerImage);
+      }
+    </script>
+
+    <link rel='stylesheet' type='text/css' href='body1.css' />
+
+  </head>
+
+  <body>
+
+    <table>
+      <tr>
+        <td rowspan="3">
+          <img src="allphases.png"  id="mainImage" alt="Large Image"
+          width = "300px" height = "200px"">
+        </td>
+      <td><img src="full.png"
+               onclick="displayImage('full.png')"
+          ></td>
+      <td><img src="waxgib.png"
+               onclick="displayImage('waxgib.png')"
+          ></td>
+      <td><img src="firstquart.png"
+               onclick="displayImage('firstquart.png')"
+          ></td>
+      </tr>
+      <tr>
+      <td><img src="waxcres.png"
+               onclick="displayImage('waxcres.png')"
+          ></td>
+      <td><img src="new.png"
+               onclick="displayImage('new.png')"
+          ></td>
+      <td><img src="wancres.png"
+               onclick="displayImage('wancres.png')"
+          ></td>
+      </tr>
+      <tr>
+      <td><img src="thirdquart.png"
+               onclick="displayImage('thirdquart.png')"
+          ></td>
+      <td><img src="wangib.png"
+               onclick="displayImage('wangib.png')"
+          ></td>
+      <td><img src="allphases.png"
+               onclick="displayImage('allphases.png')"
+          ></td>
+      </tr>
+    </table>
+
+  </body>
+
+</html>
